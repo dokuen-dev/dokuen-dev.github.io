@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dokuen Beta - Plugins & Lifetime Access</title>
+  <meta name="description" content="Discover the Dokuen Beta! Unlock the new plugin ecosystem for limitless OCR engine support and get lifetime access with Dokuen Pro Lifetime.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      /* Clean, modern light theme palette */
+      --bg-body: #fafafa;
+      --bg-surface: #ffffff;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --accent: #4f46e5;      /* Indigo */
+      --accent-hover: #4338ca;
+      --border: #e5e7eb;
+      --callout-bg: #f3f4f6;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: var(--accent-hover);
+      text-decoration: underline;
+    }
+
+    /* Header */
+    header {
+      background-color: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .beta-badge {
+      background-color: #e0e7ff;
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 6rem 5% 4rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-teaser {
+      font-size: 1.75rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.4;
+    }
+
+    .hero-yes {
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -1px;
+    }
+
+    .hero-sub {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-asterisk {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0 auto 3rem;
+      max-width: 600px;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: white;
+      border: 1px solid var(--accent);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      text-decoration: none;
+      color: white;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background-color: var(--callout-bg);
+      text-decoration: none;
+    }
+
+    /* Content Layout */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 5% 4rem;
+    }
+
+    .card {
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    }
+
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      font-size: 1.05rem;
+    }
+
+    .card p strong {
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    .card p em {
+      color: var(--text-main);
+      font-style: italic;
+    }
+
+    /* Callout Boxes */
+    .callout {
+      margin-top: 2rem;
+      background-color: var(--callout-bg);
+      border-left: 4px solid var(--accent);
+      padding: 1.5rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .callout p {
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .callout p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 4rem 5%;
+      background-color: var(--bg-surface);
+      border-top: 1px solid var(--border);
+    }
+
+    footer h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    footer p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero-teaser { font-size: 1.35rem; }
+      .hero-yes { font-size: 3.5rem; }
+      .btn-group { flex-direction: column; }
+      .card { padding: 1.5rem; }
+      .card h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      Dokuen Japanese Reader
+    </div>
+    <span class="beta-badge">Beta</span>
+  </header>
+
+  <section class="hero">
+    <div class="hero-teaser">RapidOCR? Manga OCR? EasyOCR? Bing? Azure? Google Lens?</div>
+    <div class="hero-yes">YES!</div>
+    <div class="hero-sub">Dokuen now supports all the best OCR engines in the world.*</div>
+    <div class="hero-asterisk">
+      *Potentially. The new plugins feature lays the foundation. Now we're calling on the community to expand the plugin library.
+    </div>
+    <div class="btn-group">
+      <a href="https://play.google.com/apps/testing/io.github.dokuendev.dokuenreader" class="btn btn-primary" target="_blank" rel="noopener">Join the Beta on Google Play</a>
+      <a href="https://github.com/dokuen-dev/dokuen-reader/tree/main/sdk" class="btn btn-secondary" target="_blank" rel="noopener">Developer SDK</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="card">
+      <h2>Dokuen Pro Lifetime</h2>
+      <p>
+        I heard you loud and clear. The "subscription fatigue" is real.
+        Introducing <strong>Dokuen Pro Lifetime</strong>.
+        Unlock all Dokuen Pro features <em>forever</em> with a one-time payment. No recurring fees.
+      </p>
+      
+      <div class="callout">
+        <p>
+          To keep the Lifetime option a true one-time payment without recurring costs, Lifetime does not include automatic access to Dokuen's cloud servers. Instead, it fully unlocks the equivalent Cloud OCR functionality via <strong>BYOK (Bring Your Own Key)</strong>. Just create your own free Google Cloud Platform account and paste your API key.
+        </p>
+        <p>
+          Don't want to mess around with GCP accounts and API keys? The subscription tier remains the <strong>"no-hassle"</strong> option. Get instant access to the same OCR accuracy with one-click setup.
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>The Plugin Ecosystem</h2>
+      <p>
+        With custom plugin support, you can now seamlessly integrate the specialized OCR tool you need, your favorite online dictionary, alternative machine translation backends, and more. 
+      </p>
+      <p>
+        Build your own or download plugins built and shared by the community. 
+      </p>
+
+      <div class="callout">
+        <p>
+          Plugin support is a <strong>Dokuen Pro feature</strong>. 
+        </p>
+        <p>
+          <strong><em>Wait, you mean I have to pay to use my own plugin?</em></strong><br/>
+          No! Authors of and contributors to publicly available community plugins get <strong>Dokuen Pro Lifetime for FREE.</strong>
+          As does anyone who reports bugs and submits feature requests to help make Dokuen better for everyone. As does, well, anyone who asks nicely.
+          <a href="open-letter.html">Read my letter.</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <h2>Ready to try it out?</h2>
+    <p>Help shape the future of Dokuen.</p>
+    <a href="https://play.google.com/apps/testing/io.github.dokuendev.dokuenreader" class="btn btn-primary" target="_blank" rel="noopener">Get the Beta</a>
+  </footer>
+
+</body>
+</html>

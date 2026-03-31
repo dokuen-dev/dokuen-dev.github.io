@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokuen Japanese Reader</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-12 sm:px-8 sm:py-16 w-full">
+        
+        <div class="flex flex-col sm:flex-row gap-8 mb-12 items-center text-center sm:text-left bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100">
+            <img src="assets/icon.png" alt="Dokuen Japanese Reader Icon" 
+                 class="w-32 h-32 sm:w-40 sm:h-40 rounded-3xl shadow-md object-cover shrink-0 drop-shadow-sm bg-emerald-50" />
+            
+            <div class="flex-1 flex flex-col justify-center items-center sm:items-start">
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">Dokuen Japanese Reader</h1>
+                <a href="https://play.google.com/store/apps/details?id=io.github.dokuendev.dokuenreader" target="_blank" rel="noopener noreferrer" class="transition-transform hover:scale-105 active:scale-95">
+                    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" class="h-16 -ml-2" />
+                </a>
+            </div>
+        </div>
+
+        <div class="flex gap-4 overflow-x-auto pb-8 mb-8 snap-x no-scrollbar">
+            <img src="assets/screenshot1.png" alt="Instant Screen Overlay Mode" 
+                 class="h-[28rem] w-auto rounded-2xl shrink-0 border border-gray-200 shadow-sm snap-center object-cover" />
+            
+            <img src="assets/screenshot2.png" alt="Powerful Camera Mode" 
+                 class="h-[28rem] w-auto rounded-2xl shrink-0 border border-gray-200 shadow-sm snap-center object-cover" />
+
+            <img src="assets/screenshot3.png" alt="Integrated Dictionary" 
+                 class="h-[28rem] w-auto rounded-2xl shrink-0 border border-gray-200 shadow-sm snap-center object-cover" />
+                 
+            <img src="assets/screenshot4.png" alt="Comprehension Helper" 
+                 class="h-[28rem] w-auto rounded-2xl shrink-0 border border-gray-200 shadow-sm snap-center object-cover" />
+                 
+            <img src="assets/screenshot5.png" alt="Anki Integration" 
+                 class="h-[28rem] w-auto rounded-2xl shrink-0 border border-gray-200 shadow-sm snap-center object-cover" />
+        </div>
+
+        <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100 mb-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-4">About this app</h2>
+            
+            <div class="text-base text-gray-700 space-y-4 leading-relaxed">
+                <p>Read any Japanese text instantly. Dokuen adds real-time furigana overlays to kanji in any app—perfect for manga, games, news, and websites. Point your camera at real-world text like menus or books to get instant readings.</p>
+                
+                <p>Unlike a simple translator, Dokuen is built to help you learn and read the original Japanese. Tap any word for a full definition, confirm your understanding with a sentence-level comprehension helper, and send new vocabulary to your Anki deck with a single tap. It's the ultimate all-in-one reading companion.</p>
+                
+                <h3 class="font-bold text-lg mt-8 text-gray-900 uppercase">Main Features</h3>
+                
+                <ul class="space-y-4 mt-4">
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">🚀</span>
+                        <div>
+                            <strong class="text-gray-900">Instant Screen Overlay Mode</strong>
+                            <p class="text-sm mt-1 text-gray-600">Activate the overlay to get real-time furigana in any app! Perfect for reading news, social media, games, and your favorite e-book or manga apps.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">📸</span>
+                        <div>
+                            <strong class="text-gray-900">Powerful Camera Mode (OCR)</strong>
+                            <p class="text-sm mt-1 text-gray-600">Point your camera at any physical text—a restaurant menu, a sign, or your Japanese books—and see furigana appear like magic. Perfect for practicing your reading in the real world.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">📖</span>
+                        <div>
+                            <strong class="text-gray-900">Tap-to-Define Integrated Dictionary</strong>
+                            <p class="text-sm mt-1 text-gray-600">Build your vocabulary as you read. Tap on any word with a furigana overlay to get its definition, reading, and other details from our comprehensive built-in dictionary.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">🔍</span>
+                        <div>
+                            <strong class="text-gray-900">Comprehension Helper</strong>
+                            <p class="text-sm mt-1 text-gray-600">Need more context? Simply drag-select an entire sentence to view its translation. This tool is designed as a learning aid to confirm your reading, not to replace it.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">📇</span>
+                        <div>
+                            <strong class="text-gray-900">One-Tap Anki Integration</strong>
+                            <p class="text-sm mt-1 text-gray-600">Supercharge your studies! Found a new word? Add it directly to your Anki flashcard decks from within the app. Learning new vocabulary has never been more streamlined.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">📶</span>
+                        <div>
+                            <strong class="text-gray-900">Flexible Offline & Online Modes</strong>
+                            <p class="text-sm mt-1 text-gray-600">Read and study anywhere, anytime. The app works perfectly offline for total convenience. For situations requiring the highest possible accuracy, you can enable an optional online mode to enhance text recognition.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">⚙️</span>
+                        <div>
+                            <strong class="text-gray-900">Highly Customizable</strong>
+                            <p class="text-sm mt-1 text-gray-600">Your reading, your way. Easily adjust the font size and color of the furigana to create the perfect reading experience that's easy on your eyes.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="font-bold text-lg mt-8 text-gray-900 uppercase">Who is this for?</h3>
+                
+                <ul class="space-y-4 mt-4">
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">🧑‍🎓</span>
+                        <div>
+                            <strong class="text-gray-900">Japanese Language Students</strong>
+                            <p class="text-sm mt-1 text-gray-600">This is for you! Accelerate your learning by seeing kanji readings in context. The seamless Anki integration makes creating flashcards from new words effortless, making it a must-have for JLPT study.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">📖</span>
+                        <div>
+                            <strong class="text-gray-900">Manga & Novel Readers</strong>
+                            <p class="text-sm mt-1 text-gray-600">Tackle that untranslated manga or web novel you've been wanting to read. Use the furigana to read naturally, and the comprehension helper to check your understanding of challenging passages.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">🗼</span>
+                        <div>
+                            <strong class="text-gray-900">Tourists & Expats in Japan</strong>
+                            <p class="text-sm mt-1 text-gray-600">Read your environment with confidence. Use the camera mode to read menus and signs, and the comprehension tool for clarification on more complex information when you truly need it.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-xl mr-3">🤔</span>
+                        <div>
+                            <strong class="text-gray-900">Curious Minds</strong>
+                            <p class="text-sm mt-1 text-gray-600">Anyone interested in the Japanese language who wants a powerful tool to dive in and start reading, not just translating.</p>
+                        </div>
+                    </li>
+                </ul>
+
+                <p>
+                    Stop letting difficult kanji slow you down. Break through the reading wall and experience Japanese content like never before.
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-8">
+            <div class="bg-white p-6 sm:p-8 rounded-3xl shadow-sm border border-gray-100 mb-8">
+                <h2 class="text-xl font-bold text-gray-900 mb-6">App support</h2>
+                <div class="space-y-6 text-sm">
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-gray-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <div>
+                            <p class="font-medium text-gray-900">Support email</p>
+                            <a href="mailto:dokuen.reader@gmail.com" class="text-emerald-700 hover:underline">dokuen.reader@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <svg class="w-6 h-6 text-gray-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        <div>
+                            <a href="../legal/privacy-policy.html" class="text-emerald-700 hover:underline font-medium block mt-0.5">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-6 sm:px-8">
+                <h2 class="text-sm font-bold text-gray-900 mb-3">About the developer</h2>
+                <div class="text-sm text-gray-600 space-y-1.5">
+                    <p>NAMI WORKS LLC</p>
+                    <p class="max-w-xs leading-relaxed">3-17-20 JIYUGAOKA<br/>DIA PALACE JIYUGAOKA 504<br/>MEGURO-KU, TOKYO 152-0035 JAPAN</p>
+                    <p>080-5826-8654</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+        <div class="max-w-4xl mx-auto px-4 py-8 sm:px-8 flex flex-col md:flex-row justify-center items-center gap-4 md:gap-12">
+            <p class="text-sm text-gray-500">&copy; 2026 NAMI WORKS LLC. All rights reserved.</p>
+            <div class="flex flex-wrap justify-center gap-6 text-sm">
+                <a href="../legal/tokushoho.html" class="text-emerald-700 hover:underline block mt-0.5">特定商取引法に基づく表記 (Commercial Disclosure)</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
